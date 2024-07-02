@@ -3,11 +3,17 @@
 import meter1 from "../assets/img/meter1.svg";
 import meter2 from "../assets/img/meter2.svg";
 import meter3 from "../assets/img/meter3.svg";
+import meter4 from "../assets/img/meter4.svg";
+import meter5 from "../assets/img/meter5.svg";
+import meter6 from "../assets/img/meter6.svg";
+import meter7 from "../assets/img/meter7.svg";
+import meter8 from "../assets/img/meter8.svg";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import arrow1 from "../assets/img/arrow1.svg";
 import arrow2 from "../assets/img/arrow2.svg";
-import colorSharp from "../assets/img/color-sharp.png";
+import colorSharp from "../assets/img/color-sharp1.png";
+import "./Skills.css";
 
 export const Skills = () => {
   const responsive = {
@@ -38,9 +44,12 @@ export const Skills = () => {
             <div className="skill-bx wow zoomIn">
               <h2>Skills</h2>
               <p>
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry.
-                <br /> Lorem Ipsum has been the industry's standard dummy text.
+                Versatile and skilled professional with expertise in mobile
+                development, web development, graphic design, video editing, and
+                UI/UX design. Adept at creating dynamic applications, compelling
+                graphics, and engaging user interfaces.
+                <br /> Proficient in modern frameworks and tools, ensuring
+                high-quality digital experiences across various platforms
               </p>
               <Carousel
                 responsive={responsive}
@@ -48,20 +57,24 @@ export const Skills = () => {
                 className="owl-carousel owl-theme skill-slider"
               >
                 <div className="item">
-                  <img src={meter1} alt="Image" />
+                  <img src={meter4} alt="Image" />
+                  <h5>Mobile Development</h5>
+                </div>
+                <div className="item">
+                  <img src={meter5} alt="Image" />
                   <h5>Web Development</h5>
                 </div>
                 <div className="item">
-                  <img src={meter2} alt="Image" />
-                  <h5>Brand Identity</h5>
+                  <img src={meter6} alt="Image" />
+                  <h5>Graphic Design</h5>
                 </div>
                 <div className="item">
-                  <img src={meter3} alt="Image" />
-                  <h5>Logo Design</h5>
+                  <img src={meter7} alt="Image" />
+                  <h5>Video Editing</h5>
                 </div>
                 <div className="item">
-                  <img src={meter1} alt="Image" />
-                  <h5>Web Development</h5>
+                  <img src={meter8} alt="Image" />
+                  <h5>UI/UX Design</h5>
                 </div>
               </Carousel>
             </div>

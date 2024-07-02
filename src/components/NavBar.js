@@ -2,12 +2,13 @@
 
 import { useState, useEffect } from "react";
 import { Navbar, Nav, Container } from "react-bootstrap";
-import logo from "../assets/img/logo.png";
+import logo from "../assets/img/logo1.png";
 import navIcon1 from "../assets/img/nav-icon1.svg";
 import navIcon2 from "../assets/img/nav-icon2.svg";
 import navIcon3 from "../assets/img/nav-icon3.svg";
 // import { HashLink } from "react-router-hash-link";
 // import { BrowserRouter as Router } from "react-router-dom";
+import "./NavBar.css";
 
 export const NavBar = () => {
   const [activeLink, setActiveLink] = useState("home");
@@ -72,13 +73,25 @@ export const NavBar = () => {
           </Nav>
           <span className="navbar-text">
             <div className="social-icon">
-              <a href="#">
+              <a
+                href="https://www.linkedin.com/in/kavindu-abeykoon/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <img src={navIcon1} alt="" />
               </a>
-              <a href="#">
+              <a
+                href="https://web.facebook.com/profile.php?id=100059528123913"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <img src={navIcon2} alt="" />
               </a>
-              <a href="#">
+              <a
+                href="https://www.instagram.com/kav_iii_98/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <img src={navIcon3} alt="" />
               </a>
             </div>

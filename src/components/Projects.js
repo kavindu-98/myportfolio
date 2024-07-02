@@ -5,44 +5,84 @@ import { ProjectCard } from "./ProjectCard";
 import projImg1 from "../assets/img/project-img1.png";
 import projImg2 from "../assets/img/project-img2.png";
 import projImg3 from "../assets/img/project-img3.png";
+import projImg4 from "../assets/img/project-img4.png";
+import projImg5 from "../assets/img/project-img5.png";
+import projImg6 from "../assets/img/project-img6.png";
+import projImg7 from "../assets/img/project-img7.png";
+import projImg8 from "../assets/img/project-img8.png";
 import colorSharp2 from "../assets/img/color-sharp2.png";
 import "animate.css";
 import TrackVisibility from "react-on-screen";
+import "./Projects.css";
 
 export const Projects = () => {
   const projects = [
     {
-      title: "Business Startup",
+      title: "Employee Transport Management App",
       description: "Design & Development",
       imgUrl: projImg1,
+      link: "https://github.com/kavindu-98/MobileProject.git",
     },
     {
-      title: "Business Startup",
+      title: "Mobile Travel & Hotel Booking App",
       description: "Design & Development",
       imgUrl: projImg2,
+      link: "https://github.com/kavindu-98/Travel_App.git",
     },
     {
-      title: "Business Startup",
-      description: "Design & Development",
+      title: "Student Learning Quiz App",
+      description: "Front-end Development",
       imgUrl: projImg3,
+      link: "https://github.com/kavindu-98/learnr-mobile.git",
     },
     {
-      title: "Business Startup",
-      description: "Design & Development",
-      imgUrl: projImg1,
-    },
-    {
-      title: "Business Startup",
-      description: "Design & Development",
-      imgUrl: projImg2,
-    },
-    {
-      title: "Business Startup",
-      description: "Design & Development",
+      title: "Student Learning Quiz App",
+      description: "Front-end Development",
       imgUrl: projImg3,
+      link: "https://github.com/kavindu-98/learnr-mobile.git",
     },
   ];
 
+  const webprojects = [
+    {
+      title: "Employee Transport Management Web Application",
+      description: "Design & Development",
+      imgUrl: projImg4,
+      link: "https://www.behance.net/gallery/149357783/My-project-Admin-Dashboard",
+    },
+    {
+      title: "Lionsden Gym Management Web Application",
+      description: "Design & Development",
+      imgUrl: projImg5,
+      link: "https://github.com/kavindu-98/lionsden.git",
+    },
+    {
+      title: "Samadhi Children Home Management Web Application",
+      description: "Design & Development",
+      imgUrl: projImg6,
+      link: "https://github.com/kavindu-98/samadhi.git",
+    },
+    {
+      title: "Samadhi Children Home Management Web Application",
+      description: "Design & Development",
+      imgUrl: projImg6,
+      link: "https://github.com/kavindu-98/samadhi.git",
+    },
+  ];
+  const designprojects = [
+    {
+      title: "Freelance Flyer Design",
+      description: "Flyer Design",
+      imgUrl: projImg7,
+      link: "https://www.behance.net/gallery/138907569/Graphics",
+    },
+    {
+      title: "Digital Marketing Flyer",
+      description: "Marketing Flyers",
+      imgUrl: projImg8,
+      link: "https://www.behance.net/gallery/138907569/Graphics",
+    },
+  ];
   return (
     <section className="project" id="projects">
       <Container>
@@ -70,13 +110,13 @@ export const Projects = () => {
                       id="pills-tab"
                     >
                       <Nav.Item>
-                        <Nav.Link eventKey="first">Tab 1</Nav.Link>
+                        <Nav.Link eventKey="first">Mobile Projects</Nav.Link>
                       </Nav.Item>
                       <Nav.Item>
-                        <Nav.Link eventKey="second">Tab 2</Nav.Link>
+                        <Nav.Link eventKey="second">Web Projects</Nav.Link>
                       </Nav.Item>
                       <Nav.Item>
-                        <Nav.Link eventKey="third">Tab 3</Nav.Link>
+                        <Nav.Link eventKey="third">Graphic Design</Nav.Link>
                       </Nav.Item>
                     </Nav>
                     <Tab.Content
@@ -92,23 +132,19 @@ export const Projects = () => {
                           })}
                         </Row>
                       </Tab.Pane>
-                      <Tab.Pane eventKey="section">
-                        <p>
-                          Lorem ipsum dolor sit amet consectetur adipisicing
-                          elit. Cumque quam, quod neque provident velit, rem
-                          explicabo excepturi id illo molestiae blanditiis,
-                          eligendi dicta officiis asperiores delectus quasi
-                          inventore debitis quo.
-                        </p>
+                      <Tab.Pane eventKey="second">
+                        <Row>
+                          {webprojects.map((project, index) => {
+                            return <ProjectCard key={index} {...project} />;
+                          })}
+                        </Row>
                       </Tab.Pane>
                       <Tab.Pane eventKey="third">
-                        <p>
-                          Lorem ipsum dolor sit amet consectetur adipisicing
-                          elit. Cumque quam, quod neque provident velit, rem
-                          explicabo excepturi id illo molestiae blanditiis,
-                          eligendi dicta officiis asperiores delectus quasi
-                          inventore debitis quo.
-                        </p>
+                        <Row>
+                          {designprojects.map((project, index) => {
+                            return <ProjectCard key={index} {...project} />;
+                          })}
+                        </Row>
                       </Tab.Pane>
                     </Tab.Content>
                   </Tab.Container>
